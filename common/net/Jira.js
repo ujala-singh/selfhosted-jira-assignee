@@ -20,6 +20,15 @@ class Jira {
     })
   }
 
+  async addComment (issueId, data) {
+    return this.fetch('addComment', {
+      pathname: `/rest/api/2/issue/${issueId}/comment`,
+    }, {
+      method: 'POST',
+      body: data,
+    })
+  }
+
   async createIssue (body) {
     return this.fetch('createIssue',
       { pathname: '/rest/api/2/issue' },
