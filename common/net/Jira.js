@@ -15,7 +15,7 @@ class Jira {
     return this.fetch('addAssignee', {
       pathname: `/rest/api/2/issue/${issueId}/assignee`,
     }, {
-      method: 'POST',
+      method: 'PUT',
       body: data,
     })
   }
