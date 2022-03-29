@@ -18,7 +18,7 @@ module.exports = class {
     const { assignee } = this.argv
 
     console.log(`Adding assignee to ${issueId}: \n${assignee}`)
-    await this.Jira.addAssignee(issueId, { name: assignee })
+    await this.Jira.addAssignee(issueId, { accountId: assignee })
 
     return {}
   }
